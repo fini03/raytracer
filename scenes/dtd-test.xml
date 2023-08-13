@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE scene SYSTEM "scene.dtd">
+
+<scene output_file="myImage.png">
+	<background_color r="255" g="0" b="0"/>
+	<camera>
+		<position x="1.0" y="-2.0E-10" z="-3"/>
+		<lookat x="1" y="2" z="3"/>
+		<up x="1" y="2" z="3"/>
+		<horizontal_fov angle="90"/>
+		<resolution horizontal="1920" vertical="1080"/>
+		<max_bounces n="100"/>
+	</camera>
+	<lights>
+		<ambient_light>
+			<color r="1" g="2" b="3"/>
+		</ambient_light>
+		<point_light>
+			<color r="1" g="2" b="3"/>
+			<position x="1" y="2" z="3"/>
+		</point_light>
+		<parallel_light>
+			<color r="1" g="2" b="3"/>
+			<direction x="1" y="2" z="3"/>
+		</parallel_light>
+		<spot_light>
+			<color r="1" g="2" b="3"/>
+			<position x="1" y="2" z="3"/>
+			<direction x="1" y="2" z="3"/>
+			<falloff alpha1="1" alpha2="3"/>
+		</spot_light>
+	</lights>
+	<surfaces>
+		<sphere radius="123">
+			<position x="1" y="2" z="3"/>
+			<material_solid>
+				<color r="1" g="2" b="3"/>
+				<phong ka="1" kd="1" ks="1" exponent="1"/>
+				<reflectance r="1"/>
+				<transmittance t="1"/>
+				<refraction iof="1"/>
+			</material_solid>
+			<transform>
+				<translate x="1" y="1" z="1"/>
+				<scale x="1" y="1" z="1"/>
+				<rotateX theta="1"/>
+				<rotateY theta="1"/>
+				<rotateZ theta="1"/>
+			</transform>
+		</sphere>
+		<mesh name="duck.dae">
+			<material_textured>
+				<texture name=""/>
+				<phong ka="1" kd="1" ks="1" exponent="1"/>
+				<reflectance r="1"/>
+				<transmittance t="1"/>
+				<refraction iof="1"/>
+			</material_textured>
+			<transform>
+				<translate x="1" y="1" z="1"/>
+				<scale x="1" y="1" z="1"/>
+				<rotateX theta="1"/>
+				<rotateY theta="1"/>
+				<rotateZ theta="1"/>
+				<translate x="1" y="1" z="1"/>
+				<scale x="1" y="1" z="1"/>
+			</transform>
+		</mesh>
+	</surfaces>
+</scene>

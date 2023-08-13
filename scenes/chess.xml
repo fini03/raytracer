@@ -1,0 +1,59 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE scene SYSTEM "scene.dtd">
+
+<scene output_file="chess.png">
+    <background_color r="0.0" g="0.0" b="0.0"/>
+    <camera>
+        <position x="-9.0" y="4.6" z="-3.3"/>
+        <lookat x="2.1" y="0.5" z="1.8"/>
+        <up x="0.0" y="1.0" z="0.0"/>
+        <horizontal_fov angle="19.8"/>
+        <resolution horizontal="1280" vertical="720"/>
+        <max_bounces n="4"/>
+    </camera>
+    <lights>
+        <ambient_light>
+            <color r="1.0" g="1.0" b="1.0"/>
+        </ambient_light>
+        <spot_light>
+            <color r="1.0" g="1.0" b="1.0"/>
+            <position x="-0.2" y="9.6" z="0.7"/>
+            <direction x="0.2" y="-8.0" z="1."/>
+            <falloff alpha1="20" alpha2="25" />
+        </spot_light>
+        <point_light>
+            <color r="0.15" g="0.15" b="0.15"/>
+            <position x="-2.5" y="1.45" z="0.5"/>
+        </point_light>
+    </lights>
+    <surfaces>
+        <mesh name="pawn.obj">
+            <material_solid>
+                <color r="0." g="0." b="0."/>
+                <phong ka="0.3" kd="0.5" ks="0.5" exponent="200"/>
+                <reflectance r="0.1"/>
+                <transmittance t="0.7"/>
+                <refraction iof="1.5"/>
+            </material_solid>
+        </mesh>
+        <mesh name="king.obj">
+            <material_solid>
+                <color r="1." g="1." b="1."/>
+                <phong ka="0.3" kd="0.6" ks="0.4" exponent="200"/>
+                <reflectance r="0.0"/>
+                <transmittance t="0.0"/>
+                <refraction iof="2.3"/>
+            </material_solid>
+        </mesh>
+        <mesh name="chessboard.obj">
+            <material_textured>
+                <texture name="grid.png"/>
+                <color r="0.3" g="0.6" b="0.3"/>
+                <phong ka="0.3" kd="0.5" ks="0.5" exponent="200"/>
+                <reflectance r="0.4"/>
+                <transmittance t="0.0"/>
+                <refraction iof="2.0"/>
+            </material_textured>
+        </mesh>
+    </surfaces>
+</scene>

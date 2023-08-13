@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE scene SYSTEM "scene.dtd">
+
+<scene output_file="out02-sphere.png">
+    <background_color r="0.71" g="0.89" b="1.0"/>
+    <camera>
+        <position x="0.0" y="0.0" z="0.0"/>
+        <lookat x="1" y="2" z="3"/>
+        <up x="1" y="2" z="3"/>
+        <horizontal_fov angle="90"/>
+        <resolution horizontal="400" vertical="225"/>
+        <max_bounces n="100"/>
+    </camera>
+    <lights>
+        <ambient_light>
+            <color r="1.0" g="1.0" b="1.0"/>
+        </ambient_light>
+    </lights>
+    <surfaces>
+        <sphere radius="0.5">
+            <position x="0" y="0" z="-1"/>
+            <material_solid>
+                <color r="0.97" g="0.78" b="0.88"/>
+                <phong ka="0" kd="0" ks="0" exponent="0"/>
+                <reflectance r="0"/>
+                <transmittance t="0"/>
+                <refraction iof="0"/>
+            </material_solid>
+            <transform>
+            </transform>
+        </sphere>
+    </surfaces>
+</scene>

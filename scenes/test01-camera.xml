@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE scene SYSTEM "scene.dtd">
+
+<scene output_file="out01-camera.png">
+    <background_color r="0.71" g="0.89" b="1.0"/>
+    <camera>
+        <position x="0.0" y="0.0" z="0.0"/>
+        <lookat x="1" y="2" z="3"/>
+        <up x="1" y="2" z="3"/>
+        <horizontal_fov angle="90"/>
+        <resolution horizontal="400" vertical="225"/>
+        <max_bounces n="100"/>
+    </camera>
+    <lights>
+        <ambient_light>
+            <color r="1.0" g="1.0" b="1.0"/>
+        </ambient_light>
+    </lights>
+    <surfaces>
+    </surfaces>
+</scene>

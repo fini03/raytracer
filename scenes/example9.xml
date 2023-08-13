@@ -1,0 +1,231 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE scene SYSTEM "scene.dtd">
+
+<scene output_file="example9.png">
+    <background_color r="0.0" g="0.0" b="0.0"/>
+
+    <!-- Camera -->
+    <camera>
+        <position x="0.0" y="0.0" z="1.0"/>
+        <lookat x="0.0" y="0.0" z="-3.0"/>
+        <up x="0.0" y="1.0" z="0.0"/>
+        <horizontal_fov angle="55"/>
+        <resolution horizontal="2048" vertical="2048"/>
+        <max_bounces n="8"/>
+    </camera>
+
+    <!-- Lights -->
+    <lights>
+        <ambient_light>
+            <color r="1.0" g="1.0" b="1.0"/>
+        </ambient_light>
+        <point_light>
+            <color r="0.7" g="0.7" b="0.7"/>
+            <position x="2.0" y="10.0" z="-2.5"/>
+        </point_light>
+        <point_light>
+            <color r="0.7" g="0.7" b="0.7"/>
+            <position x="-2.0" y="10.0" z="-2.5"/>
+        </point_light>
+    </lights>
+
+    <!-- Surfaces -->
+    <surfaces>
+
+        <!-- First Box -->
+        <mesh name="box.obj">
+            <material_solid>
+                <color r="1.0" g="1.0" b="1.0"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="20"/>
+                <reflectance r="0"/>
+                <transmittance t="0"/>
+                <refraction iof="0"/>
+            </material_solid>
+            <transform>
+                <translate x="-6.0" y="-1.5" z="-5.0"/>
+                <rotateY theta="60"/>
+                <scale x="0.8" y="2.0" z="0.8"/>
+            </transform>
+        </mesh>
+
+        <!-- Second Box -->
+        <mesh name="box.obj">
+            <material_solid>
+                <color r="1.0" g="1.0" b="1.0"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="20"/>
+                <reflectance r="0"/>
+                <transmittance t="0"/>
+                <refraction iof="0"/>
+            </material_solid>
+            <transform>
+                <translate x="6.0" y="-1.5" z="-5.0"/>
+                <rotateY theta="-60.0"/>
+                <scale x="0.8" y="2.0" z="0.8"/>
+            </transform>
+        </mesh>
+
+        <!-- Third Box -->
+        <mesh name="box.obj">
+            <material_solid>
+                <color r="1.0" g="1.0" b="1.0"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="20"/>
+                <reflectance r="1.0"/>
+                <transmittance t="0"/>
+                <refraction iof="2.3"/>
+            </material_solid>
+            <transform>
+                <translate x="-4.0" y="-1.5" z="-7.0"/>
+                <rotateY theta="30.0"/>
+                <scale x="0.8" y="3.0" z="0.8"/>
+            </transform>
+        </mesh>
+
+        <!-- Fourth Box -->
+        <mesh name="box.obj">
+            <material_solid>
+                <color r="1.0" g="1.0" b="1.0"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="20"/>
+                <reflectance r="1.0"/>
+                <transmittance t="0"/>
+                <refraction iof="2.3"/>
+            </material_solid>
+            <transform>
+                <translate x="4.0" y="-1.5" z="-7.0"/>
+                <rotateY theta="-30.0"/>
+                <scale x="0.8" y="3.0" z="0.8"/>
+            </transform>
+        </mesh>
+
+        <!-- Cylinder -->
+        <mesh name="cylinder.obj">
+            <material_solid>
+                <color r="1.0" g="1.0" b="1.0"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="20"/>
+                <reflectance r="0"/>
+                <transmittance t="0"/>
+                <refraction iof="0"/>
+            </material_solid>
+            <transform>
+                <translate x="0.0" y="-1.5" z="-8.5"/>
+                <scale x="0.8" y="5.0" z="0.8"/>
+            </transform>
+        </mesh>
+	
+
+        <!-- Floor -->
+        <mesh name="plane_small.obj">
+            <material_textured>
+                <texture name="mramor6x6.png"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="200"/>
+                <reflectance r="0"/>
+                <transmittance t="0"/>
+                <refraction iof="0"/>
+            </material_textured>
+            <transform>
+                <translate x="0.0" y="-2.5" z="-10.0"/>
+                <rotateX theta="-90.0"/>
+                <scale x="20" y="20" z="1.0"/>
+            </transform>
+        </mesh>
+
+        <!-- Wall -->
+        <mesh name="plane_small.obj">
+            <material_textured>
+                <texture name="Brick.png"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="200"/>
+                <reflectance r="0"/>
+                <transmittance t="0"/>
+                <refraction iof="0"/>
+            </material_textured>
+            <transform>
+                <translate x="0.0" y="0" z="-15.0"/>
+                <scale x="160.0" y="160.0" z="1.0"/>
+            </transform>
+        </mesh>
+
+        <!-- First sphere -->
+        <sphere radius="1.0">
+            <position x="0" y="0" z="0"/>
+            <material_solid>
+                <color r="0.18" g="0.5" b="0.17"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="200"/>
+                <reflectance r="0"/>
+                <transmittance t="0.8"/>
+                <refraction iof="2.3"/>
+            </material_solid>
+            <transform>
+                <translate x="-6.0" y="1.5" z="-5.0"/>
+                <scale x="1.8" y="0.8" z="0.8"/>
+                <rotateY theta="60"/>
+            </transform>
+        </sphere>
+
+        <!-- Second sphere -->
+        <sphere radius="1.0">
+            <position x="0" y="0" z="0"/>
+            <material_solid>
+                <color r="0.18" g="0.5" b="0.17"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="200"/>
+                <reflectance r="0"/>
+                <transmittance t="0.8"/>
+                <refraction iof="2.3"/>
+            </material_solid>
+            <transform>
+                <translate x="6.0" y="1.5" z="-5.0"/>
+                <scale x="1.8" y="0.8" z="0.8"/>
+                <rotateY theta="-60"/>
+            </transform>
+        </sphere>
+
+        <!-- Third sphere -->
+        <sphere radius="1.0">
+            <position x="0" y="0" z="0"/>
+            <material_solid>
+                <color r="0.17" g="0.18" b="0.5"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="200"/>
+                <reflectance r="0.8"/>
+                <transmittance t="0.0"/>
+                <refraction iof="2.3"/>
+            </material_solid>
+            <transform>
+                <translate x="-4.0" y="3.0" z="-7.0"/>
+                <scale x="2" y="1" z="1"/>
+                <rotateY theta="30"/>
+            </transform>
+        </sphere>
+
+        <!-- Fourth sphere -->
+        <sphere radius="1.0">
+            <position x="0" y="0" z="0"/>
+            <material_solid>
+                <color r="0.17" g="0.18" b="0.5"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="200"/>
+                <reflectance r="0.8"/>
+                <transmittance t="0.0"/>
+                <refraction iof="2.3"/>
+            </material_solid>
+            <transform>
+                <translate x="4.0" y="3.0" z="-7.0"/>
+                <scale x="2" y="1" z="1"/>
+                <rotateY theta="-30"/>
+            </transform>
+        </sphere>
+
+        <!-- Fifth sphere -->
+        <sphere radius="1.0">
+            <position x="0" y="0" z="0"/>
+            <material_solid>
+                <color r="0.2" g="0.2" b="0.2"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="200"/>
+                <reflectance r="0.3"/>
+                <transmittance t="0.7"/>
+                <refraction iof="1.5"/>
+            </material_solid>
+            <transform>
+                <translate x="0.0" y="5.5" z="-8.5"/>
+                <scale x="1" y="2" z="1"/>
+            </transform>
+        </sphere>
+
+    </surfaces>
+</scene>

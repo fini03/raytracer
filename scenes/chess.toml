@@ -1,0 +1,9 @@
+kdtree = true
+super_sampling = { RandomSampling = { sample_count = 64 } }
+cook_torrance = true
+texture_interpolation = "Linear"
+fresnel = true
+
+[dof]
+focal_length = 9
+aperture = 0.1

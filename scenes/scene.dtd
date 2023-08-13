@@ -1,0 +1,129 @@
+<!ELEMENT scene (background_color, camera, lights, surfaces)>
+<!ELEMENT background_color EMPTY>
+
+<!ELEMENT camera (position, lookat, up, horizontal_fov, resolution, max_bounces)>
+<!ELEMENT position EMPTY>
+<!ELEMENT lookat EMPTY>
+<!ELEMENT up EMPTY>
+<!ELEMENT horizontal_fov EMPTY>
+<!ELEMENT resolution EMPTY>
+<!ELEMENT max_bounces EMPTY>
+
+<!ELEMENT lights ((ambient_light | point_light | parallel_light | spot_light)*)>
+<!ELEMENT ambient_light (color)>
+<!ELEMENT point_light (color, position)>
+<!ELEMENT parallel_light (color, direction)>
+<!ELEMENT spot_light (color, position, direction, falloff)>
+<!ELEMENT color EMPTY>
+<!ELEMENT direction EMPTY>
+<!ELEMENT falloff EMPTY>
+
+<!ELEMENT surfaces ((sphere | mesh)*)>
+<!ELEMENT sphere (position, (material_solid | material_textured), transform?)>
+<!ELEMENT mesh ((material_solid | material_textured), transform?)>
+
+<!ELEMENT material_solid (color, phong, reflectance, transmittance, refraction)>
+<!ELEMENT material_textured (texture, phong, reflectance, transmittance, refraction)>
+<!ELEMENT phong EMPTY>
+<!ELEMENT reflectance EMPTY>
+<!ELEMENT transmittance EMPTY>
+<!ELEMENT refraction EMPTY>
+<!ELEMENT texture EMPTY>
+
+<!ELEMENT transform ((translate | scale | rotateX | rotateY | rotateZ)*)>
+<!ELEMENT translate EMPTY>
+<!ELEMENT scale EMPTY>
+<!ELEMENT rotateX EMPTY>
+<!ELEMENT rotateY EMPTY>
+<!ELEMENT rotateZ EMPTY>
+
+
+
+<!ATTLIST scene output_file CDATA #REQUIRED>
+
+<!ATTLIST background_color
+	r NMTOKEN #REQUIRED
+	g NMTOKEN #REQUIRED
+	b NMTOKEN #REQUIRED>
+
+<!ATTLIST position
+	x NMTOKEN #REQUIRED
+	y NMTOKEN #REQUIRED
+	z NMTOKEN #REQUIRED>
+
+<!ATTLIST lookat
+	x NMTOKEN #REQUIRED
+	y NMTOKEN #REQUIRED
+	z NMTOKEN #REQUIRED>	
+
+<!ATTLIST up
+	x NMTOKEN #REQUIRED
+	y NMTOKEN #REQUIRED
+	z NMTOKEN #REQUIRED>
+
+<!ATTLIST horizontal_fov
+	angle NMTOKEN #REQUIRED>
+
+<!ATTLIST resolution
+	horizontal NMTOKEN #REQUIRED
+	vertical NMTOKEN #REQUIRED>
+
+<!ATTLIST max_bounces
+	n NMTOKEN #REQUIRED>
+
+<!ATTLIST color
+	r NMTOKEN #REQUIRED
+	g NMTOKEN #REQUIRED
+	b NMTOKEN #REQUIRED>
+
+<!ATTLIST direction
+	x NMTOKEN #REQUIRED
+	y NMTOKEN #REQUIRED
+	z NMTOKEN #REQUIRED>
+
+<!ATTLIST falloff
+	alpha1 NMTOKEN #REQUIRED
+	alpha2 NMTOKEN #REQUIRED>
+
+<!ATTLIST sphere
+	radius NMTOKEN #REQUIRED>
+
+<!ATTLIST mesh
+	name CDATA #REQUIRED>
+
+<!ATTLIST phong
+	ka NMTOKEN #REQUIRED
+	kd NMTOKEN #REQUIRED
+	ks NMTOKEN #REQUIRED
+	exponent NMTOKEN #REQUIRED>
+
+<!ATTLIST reflectance
+	r NMTOKEN #REQUIRED>
+
+<!ATTLIST transmittance
+	t NMTOKEN #REQUIRED>
+
+<!ATTLIST refraction
+	iof NMTOKEN #REQUIRED>
+
+<!ATTLIST texture
+	name CDATA #REQUIRED>
+
+<!ATTLIST translate
+	x NMTOKEN #REQUIRED
+	y NMTOKEN #REQUIRED
+	z NMTOKEN #REQUIRED>
+
+<!ATTLIST scale
+	x NMTOKEN #REQUIRED
+	y NMTOKEN #REQUIRED
+	z NMTOKEN #REQUIRED>
+
+<!ATTLIST rotateX
+	theta NMTOKEN #REQUIRED>
+
+<!ATTLIST rotateY
+	theta NMTOKEN #REQUIRED>
+
+<!ATTLIST rotateZ
+	theta NMTOKEN #REQUIRED>

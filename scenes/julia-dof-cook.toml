@@ -1,0 +1,8 @@
+random_seed = 4094461473125584901
+cook_torrance = true
+kdtree = true
+super_sampling = { RandomSampling = { sample_count = 64 } }
+
+[dof]
+focal_length = 4
+aperture = 0.1

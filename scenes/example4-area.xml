@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE scene SYSTEM "scene.dtd">
+
+<scene output_file="example4-area.png">
+    <background_color r="0.0" g="0.0" b="0.0"/>
+    <camera>
+        <position x="0.0" y="0.0" z="1.0"/>
+        <lookat x="0.0" y="0.0" z="-2.5"/>
+        <up x="0.0" y="1.0" z="0.0"/>
+        <horizontal_fov angle="45"/>
+        <resolution horizontal="512" vertical="512"/>
+        <max_bounces n="8"/>
+    </camera>
+    <lights>
+        <ambient_light>
+            <color r="1.0" g="1.0" b="1.0"/>
+        </ambient_light>
+        <rectangular_area num_steps="16">
+            <color r="1.0" g="1.0" b="1.0"/>
+            <corner x="-0.5" y="2.5" z="-1.5"/>
+            <v1 x="1.0" y="0.0" z="0.0"/>
+            <v2 x="0.0" y="0.0" z="-1.0"/>
+        </rectangular_area>
+    </lights>
+    <surfaces>
+        <sphere radius="1.0">
+            <position x="0.0" y="1.0" z="-3.0"/>
+            <material_solid>
+                <color r="0.25" g="0.18" b="0.50"/>
+                <phong ka="0.3" kd="2.0" ks="2.5" exponent="200"/>
+                <reflectance r="0.0"/>
+                <transmittance t="0.0"/>
+                <refraction iof="2.3"/>
+            </material_solid>
+        </sphere>
+        <mesh name="open_room.obj">
+            <material_solid>
+                <color r="0.3" g="0.6" b="0.3"/>
+                <phong ka="0.3" kd="0.9" ks="1.0" exponent="20"/>
+                <reflectance r="0.0"/>
+                <transmittance t="0.0"/>
+                <refraction iof="0.0"/>
+            </material_solid>
+        </mesh>
+    </surfaces>
+</scene>
