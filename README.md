@@ -3,25 +3,25 @@ This is a simple raytracer developed as a final project for the course "GFX - Fo
 
 ## Usage
 cd into src directory\
-cargo run --release <path to XML> <path to toml file (optional)>
+`cargo run --release <path to XML> <path to toml file (optional)>`
 
 Example:\
-cargo run --release ../scenes/example1.xml
+`cargo run --release ../scenes/example1.xml`
 
 To use the toml file the command will look like this:\
-cargo run --release ../scenes/chess.xml ../scenes/chess.toml
+`cargo run --release ../scenes/chess.xml ../scenes/chess.toml`
 
 A list of commands to render some of the scenes:\
-cargo run --release ../scenes/example1.xml\
-cargo run --release ../scenes/example3.xml ../scenes/cook.toml\
-cargo run --release ../scenes/example4-area.xml ../scenes/cook.toml\
-cargo run --release ../scenes/example6.xml ../scenes/anim.toml\
-cargo run --release ../scenes/example6-anti.xml ../scenes/anti.toml\
-cargo run --release ../scenes/example6-fresnel.xml ../scenes/fresnel.toml\
-cargo run --release ../scenes/example6-julia.xml ../scenes/julia-dof-cook.toml\
-cargo run --release ../scenes/example7-dof.xml ../scenes/dof.toml\
-cargo run --release ../scenes/example9-normal.xml ../scenes/normal.toml\
-cargo run --release ../scenes/spotlight.xml\
+```cargo run --release ../scenes/example3.xml ../scenes/cook.toml
+cargo run --release ../scenes/example4-area.xml ../scenes/cook.toml
+cargo run --release ../scenes/example6.xml ../scenes/anim.toml
+cargo run --release ../scenes/example6-anti.xml ../scenes/anti.toml
+cargo run --release ../scenes/example6-fresnel.xml ../scenes/fresnel.toml
+cargo run --release ../scenes/example6-julia.xml ../scenes/julia-dof-cook.toml
+cargo run --release ../scenes/example7-dof.xml ../scenes/dof.toml
+cargo run --release ../scenes/example9-normal.xml ../scenes/normal.toml
+cargo run --release ../scenes/spotlight.xml
+```
 
 To use supersampling append ../scenes/supersampling.toml to the command. Only one toml file can be added at a time, to have multiple effects or trying them out, write your own toml files. There are some already specified. 
 
