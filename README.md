@@ -6,10 +6,10 @@ cd into src directory\
 `cargo run --release <path to XML> <path to toml file (optional)>`
 
 Example:\
-`cargo run --release ../scenes/example1.xml`
+```cargo run --release ../scenes/example1.xml```
 
 To use the toml file the command will look like this:\
-`cargo run --release ../scenes/chess.xml ../scenes/chess.toml`
+```cargo run --release ../scenes/chess.xml ../scenes/chess.toml```
 
 A list of commands to render some of the scenes:\
 ```cargo run --release ../scenes/example3.xml ../scenes/cook.toml
