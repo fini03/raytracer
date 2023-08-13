@@ -2,16 +2,16 @@
 This is a simple raytracer developed as a final project for the course "GFX - Foundations of Computer Graphics" at the University of Vienna. The objectives of this task was to understand the conepts of raytracing and create a raytracer which renders a scene based on a given XML file following a specific [file specification](http://vda.univie.ac.at/Teaching/Graphics/23s/Labs/Lab3/lab2_file_specification.html). It currently supports all the effects listed on the course site including supersampling, rendering julia sets and the kd-tree acceleration structure using N log N building algorithm. Please note that the project will only run with Rust 1.17 due to OnceLock. Per default multithreading is on (specify the number of threads num_threads you want to activate in the toml file) and kdtree off (set in the toml file kdtree = true to activate).
 
 ## Usage
-cd into src directory\
+cd into src directory and run:
 `cargo run --release <path to XML> <path to toml file (optional)>`
 
-Example:\
+Example:
 ```cargo run --release ../scenes/example1.xml```
 
-To use the toml file the command will look like this:\
+To use the toml file the command will look like this:
 ```cargo run --release ../scenes/chess.xml ../scenes/chess.toml```
 
-A list of commands to render some of the scenes:\
+A list of commands to render some of the scenes:
 ```cargo run --release ../scenes/example3.xml ../scenes/cook.toml
 cargo run --release ../scenes/example4-area.xml ../scenes/cook.toml
 cargo run --release ../scenes/example6.xml ../scenes/anim.toml
