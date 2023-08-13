@@ -32,8 +32,8 @@ To use supersampling append ../scenes/supersampling.toml to the command. Only on
     <td><img src="https://github.com/fini03/raytracer/blob/main/output/example4-area.png" alt="2" width = 512px height = 440px></td>
    </tr> 
    <tr>
-      <td><img src="https://github.com/fini03/raytracer/blob/main/output/example7-dof.png" alt="3" width = 512px height = 512px></td>
-      <td><img src="https://github.com/fini03/raytracer/blob/main/output/example9-normal.png" align="right" alt="4" width = 512px height = 512px>
+      <td><img src="https://github.com/fini03/raytracer/blob/main/output/example7-dof.png" alt="3" width = 512px height = 440px></td>
+      <td><img src="https://github.com/fini03/raytracer/blob/main/output/example9-normal.png" align="right" alt="4" width = 512px height = 440px>
   </td>
   </tr>
 </table>
