@@ -42,7 +42,7 @@ To use supersampling append ../scenes/supersampling.toml to the command. Only on
       <td><img src="https://github.com/fini03/raytracer/blob/main/output/example6-julia.png" alt="5" width = 1920px height = 512px></td>
    </tr>
    <tr>
-      <td><img src="https://github.com/fini03/raytracer/blob/main/output/chess.png" align="right" alt="6" width = 1280px height = 640px>
+      <td><img src="https://github.com/fini03/raytracer/blob/main/output/chess.png" align="right" alt="6" width = 1280px height = 512px>
    </td>
    </tr>
 </table>
