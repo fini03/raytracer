@@ -23,7 +23,7 @@ cargo run --release ../scenes/example9-normal.xml ../scenes/normal.toml
 cargo run --release ../scenes/spotlight.xml
 ```
 
-To use supersampling append ../scenes/supersampling.toml to the command. Only one toml file can be added at a time, to have multiple effects or trying them out, write your own toml files. There are some already specified. 
+To use supersampling append `../scenes/supersampling.toml` to the command. Only one toml file can be added at a time, to have multiple effects or trying them out, write your own toml files. There are some already specified. 
 
 ## Example Output
 <table>
