@@ -11,7 +11,8 @@
         <resolution horizontal="512" vertical="512"/>
         <max_bounces n="8"/>
     </camera>
-    <lights>	
+    <lights>
+	
         <ambient_light>
             <color r="1.0" g="1.0" b="1.0"/>
         </ambient_light>
